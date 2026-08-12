@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Card - TailwindCSS</title>
+  <!-- Importamos TailwindCSS vía CDN para que funcione al instante sin configuración -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 flex items-center justify-center min-h-screen">
+
+  <!-- INICIO DE LA CARD -->
+  <div class="flex flex-col bg-white rounded-[2rem] p-3 shadow-xl w-80">
+    
+    <!-- ÁREA SUPERIOR: Imagen y elementos superpuestos -->
+    <div class="relative w-full h-72">
+      <!-- Imagen principal (He agregado una imagen pública temporal de zapatillas para que se vea completo) -->
+      <img 
+        src="contenidos/imagnezapatp.jpg" 
+        alt="Nike Air Force 1" 
+        class="w-full h-full object-cover rounded-3xl"
+      >
+      
+      <!-- Badge "Best Seller" -->
+      <div class="absolute top-4 left-4 bg-black/30 backdrop-blur-md text-white text-xs px-3 py-1.5 rounded-full font-medium">
+        Best Seller
+      </div>
+      
+      <!-- Logo Nike -->
+      <div class="absolute top-4 right-4 bg-white w-10 h-10 rounded-full flex justify-center items-center shadow-sm overflow-hidden">
+        <img src="contenidos/logo nike.jpg" alt="Logo Nike" class="w-7 h-7 object-contain">
+      </div>
+      
+      <!-- Indicadores del Carrusel -->
+      <div class="absolute bottom-4 w-full flex flex-row justify-center gap-1.5">
+        <div class="w-2 h-2 bg-white rounded-full"></div>
+        <div class="w-2 h-2 bg-white/50 rounded-full"></div>
+        <div class="w-2 h-2 bg-white/50 rounded-full"></div>
+        <div class="w-2 h-2 bg-white/50 rounded-full"></div>
+      </div>
+    </div>
+    
+    <!-- ÁREA DE INFORMACIÓN -->
+    <div class="flex flex-col mt-5 px-2">
+      <h2 class="text-xl font-bold text-black leading-tight">Nike Airforce1 Premium</h2>
+      <h3 class="text-gray-400 text-sm font-medium mt-1">Own the Airforce</h3>
+      <p class="text-gray-400 text-xs mt-3 leading-relaxed pr-2">
+        Step back into classic hoops style with a durable leather.
+      </p>
+    </div>
+    
+    <!-- ÁREA INFERIOR: Precio y Botón -->
+    <div class="flex flex-row justify-between items-center mt-6 px-2 mb-2">
+      
+      <!-- Precio -->
+      <div class="bg-gray-100/80 text-black font-bold text-lg px-4 py-1.5 rounded-full">
+        $111
+      </div>
+      
+      <!-- Botón Buy Now -->
+      <button class="flex flex-row items-center gap-3 bg-black text-white pl-5 pr-1.5 py-1.5 rounded-full font-medium text-sm hover:bg-gray-900 transition-colors">
+        Buy Now
+        <!-- Círculo blanco con flecha -->
+        <div class="flex justify-center items-center bg-white text-black w-7 h-7 rounded-full">
+          <!-- Flecha Unicode sencilla -->
+          <span class="text-sm font-bold -mt-0.5">↗</span>
+        </div>
+      </button>
+      
+    </div>
+    
+  </div>
+  <!-- FIN DE LA CARD -->
+
+</body>
+</html>
